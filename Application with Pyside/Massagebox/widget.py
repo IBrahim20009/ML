@@ -28,7 +28,7 @@ class Widget(QWidget):
         layout.addWidget(Informationbutton)
         layout.addWidget(Warningbutton)
         self.setLayout(layout)
-    def hardfunc(self):
+    def hardfunc(self): 
         ret = QMessageBox.critical(self, "Message title",
                                    "Critical Message",
                                     QMessageBox.Ok)
