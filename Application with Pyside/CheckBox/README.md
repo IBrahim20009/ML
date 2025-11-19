@@ -1,44 +1,53 @@
-# PySide6 Desktop Example  
-Simple GUI with Radio Buttons (Windows / Linux)
+# PySide6 OS Selector — شرح + Documentation
 
-# مثال PySide6  
-واجهة بسيطة تحتوي على خيارات نظام التشغيل (ويندوز / لينكس)
+## 🇸🇦 الشرح بالعربي
 
+هذا المشروع عبارة عن واجهة رسومية بسيطة باستخدام **PySide6** تسمح للمستخدم باختيار نظام التشغيل من خيارين:
+- Windows  
+- Linux  
+
+عند اختيار أحدهما، يتم طباعة رسالة مختلفة في وحدة الإخراج.
+
+## 📁 مكونات المشروع
+
+### 1️⃣ main.py
+الملف المسؤول عن تشغيل التطبيق:
+- ينشئ QApplication
+- ينشئ نافذة من widget
+- يعرض الواجهة
+- يشغل الحلقة الرئيسية
+
+### 2️⃣ Widget.py
+يحتوي على المنطق الأساسي للواجهة:
+- زرين من نوع RadioButton
+- مجموعة اختيار حصرية (ButtonGroup)
+- دوال مرتبطة بالنقر:
+  - Windows → تطبع “hj”
+  - Linux → تطبع “hi from linux”
+  
 ---
 
-## 📌 Overview | نظرة عامة
+## 🇺🇸 English Documentation
 
-This project is a simple PySide6 desktop application demonstrating how to use **Radio Buttons**, **signals**, and **layouts** in a Python GUI.
+This project is a simple **PySide6 GUI** that allows the user to select between two operating systems:
+- Windows  
+- Linux  
 
-يعرض هذا المشروع مثالًا بسيطًا لتطبيق PySide6 يوضّح كيفية استخدام **أزرار الاختيار (Radio Buttons)**، والإشارات (Signals)، وترتيب العناصر داخل الواجهة.
+Each selection triggers a different print message in the terminal.
 
----
+## 📁 Project Structure
 
-# 🗂 File Explanation | شرح الملفات
+### 1️⃣ main.py
+Responsible for running:
+- Creates `QApplication`
+- Initializes a `widget` window
+- Shows the GUI
+- Starts the main event loop
 
-## 1️⃣ main.py
-
-### **English Explanation**
-`main.py` is the entry point of the application. It:
-- Creates a `QApplication`
-- Imports the main widget from `Widget.py`
-- Shows the window
-- Runs the event loop using `app.exec()`
-
-### **Arabic Explanation**
-ملف **main.py** هو نقطة التشغيل الأساسية للتطبيق، حيث:
-- ينشئ كائن `QApplication`
-- يستورد الواجهة الرئيسية من `Widget.py`
-- يعرض نافذة التطبيق
-- يبدأ حلقة التشغيل باستخدام `app.exec()`
-
-### **Code**
-```python
-from PySide6.QtWidgets import QApplication
-from Widget import widget
-import sys 
-
-app = QApplication(sys.argv)
-wind = widget()
-wind.show()
-app.exec()
+### 2️⃣ Widget.py
+Implements the UI logic:
+- Two `QRadioButton`s
+- Exclusive `QButtonGroup`
+- Connected slots:
+  - Windows → prints “hj”
+  - Linux → prints “hi from linux”
