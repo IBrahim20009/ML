@@ -24,12 +24,3 @@ However:
 | Open Source friendly | ✔ | – |
 
 الاختلاف الأساسي أن **PySide** مناسب للمشاريع المفتوحة والخاصّة بدون قيود الترخيص.
-
----
-
-## 🎨 Building UI with Qt Designer  
-PySide supports `.ui` files created with **Qt Designer**.  
-These files can be converted to Python using:
-
-```bash
-pyside6-uic interface.ui -o interface.py
